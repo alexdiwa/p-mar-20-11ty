@@ -32,6 +32,7 @@ a {
   color: var(--color-link);
   text-decoration: underline;
   font-weight: 500;
+  padding: 1px;
 
   &:hover {
     text-decoration: none;
@@ -40,9 +41,8 @@ a {
   &:focus {
     text-decoration: none;
     outline: 3px solid transparent;
-    color: var(--color-text);
-    background-color: var(--color-highlight);
-    box-shadow: 0 -2px var(--color-highlight), 0 4px var(--color-text),
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px var(--color-link)
   }
 }
 
@@ -74,8 +74,8 @@ h2 {
 .skip-link:focus {
   display: inline-block;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 5px;
+  left: 5px;
 }
 
 

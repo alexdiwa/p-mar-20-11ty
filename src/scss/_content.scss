@@ -32,7 +32,7 @@ ul.cv {
   padding: 0;
 
   & > * + * {
-    margin-top: 1.7em;
+    margin-top: 3.5rem;
   }
 }
 
@@ -49,6 +49,7 @@ ul.cv {
 .cv-info {
   list-style: none;
   padding: 0;
+  margin-top: 1.5em;
 
   li::before {
     content: '-'
