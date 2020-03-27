@@ -1,22 +1,56 @@
 .content {
+  line-height: 1.8;
   margin: auto;
   max-width: var(--content-width-std);
+  outline: 3px solid transparent;
 
   ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    line-height: 1.9;
-
-    span[role='img'] {
-      padding-right: 0.5rem;
+    & > * + * {
+      margin-top: 0.1em;
     }
   }
 
   & > * + * {
     margin-top: 1.5em;
-    
+  }
+}
+
+ul.hire-me {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    span[role='img'] {
+      padding-right: 0.8rem;
+    }
+  }
+}
+
+ul.cv {
+  list-style: none;
+  padding: 0;
+
+  & > * + * {
+    margin-top: 1.7em;
+  }
+}
+
+.cv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.cv-info {
+  list-style: none;
+  padding: 0;
+
+  li::before {
+    content: '-'
   }
 }

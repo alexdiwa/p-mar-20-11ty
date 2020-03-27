@@ -9,10 +9,17 @@ nav ul {
   margin: 0;
 }
 
-header, footer {
+header, main, footer {
   margin: auto;
-  padding: 1.5rem 0;
   max-width: var(--content-width-std);
+
+  > :first-child {
+    padding: 0.2rem 0.8rem;
+  }
+}
+
+header, footer {
+  padding: 1.5rem 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -21,25 +28,43 @@ header, footer {
   }
 }
 
-header, main, footer {
-  > :first-child {
-    padding: 0.2rem 0.8rem;
-  }
-}
-
 a {
-  color: inherit;
+  color: var(--color-link);
+  text-decoration: underline;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &:focus {
-    outline: 3px solid transparent;
     text-decoration: none;
+    outline: 3px solid transparent;
+    color: var(--color-text);
     background-color: var(--color-highlight);
     box-shadow: 0 -2px var(--color-highlight), 0 4px var(--color-text),
   }
 }
 
-p {
-  line-height: 1.75;
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--color-highlight);
+}
+::-moz-selection {
+  background: var(--color-highlight);
 }
 
 .skip-link:not(:focus) {

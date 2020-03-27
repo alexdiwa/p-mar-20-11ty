@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
+  <title>alex diwa - {{ title }}</title>
   <style>{% include "css/global.css" ignore missing %}</style>
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
   {% include "components/header.njk" %}
   <main>
-    <section id="content" class="content">
+    <section id="content" class="content" tabindex="-1">
       {{ content | safe }}
     </section>
   </main>
   {% include "components/footer.njk" %}
+
+  <script>
+    twemoji.parse(document.body, {
+      folder: 'svg',
+      ext: '.svg',
+      size: '18x18'
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+---
+title: CV
+layout: base
+history:
+  - company: GROW
+    title: Associate Frontend Developer
+    period: Oct '19 - Mar '20
+    info:
+    - Texdfsdsdf
+    - sdfsdfsdfs
+    - g lawefmwewegegn
+  - company: HealthBank
+    title: Intern Frontend Developer
+    period: Aug '19
+    info:
+    - Texdfsdsdf
+    - sdfsdfsdfs
+    - g lawefmwewegegn
+  - company: Coder Academy
+    title: Diploma of IT
+    period: Feb '19 - Jul '19
+    info:
+    - Texdfsdsdf
+    - sdfsdfsdfs
+    - g lawefmwewegegn
+
+---
+
+<h1>CV</h1>
+
+<ul class="cv">
+{% for experience in history %}
+  <li>
+    <div class="cv-header">
+      <h2>
+        {{ experience.company }}
+      </h2>
+      <span>
+        {{ experience.period }}
+      </span>
+    </div>
+    
+    {{ experience.title }}
+
+    <ul class="cv-info">
+    {% for item in experience.info %}
+      <li>
+        {{ item }}
+      </li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
