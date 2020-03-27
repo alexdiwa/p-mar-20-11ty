@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>alex diwa</title>
+  <title>{{ title }}</title>
 </head>
 <body>
-  <h1>Alex Diwa</h1>
+  {% include "components/header.njk" %}
+  {{ content | safe-}}
+  {% include "components/footer.njk" %}
 </body>
 </html>
-
