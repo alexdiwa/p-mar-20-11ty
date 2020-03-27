@@ -1,6 +1,6 @@
 ---
-layout: expanded
-title: Home
+layout: base
+title: Projects
 ---
 
 Title is: {{ Projects }}

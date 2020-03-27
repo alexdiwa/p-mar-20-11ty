@@ -1,6 +1,7 @@
-@import 'normalize';
-@import 'theme';
-@import 'typography';
+@import 'utils/normalize';
+@import 'utils/theme';
+@import 'utils/typography';
+@import 'utils/mixins';
 
 nav ul {
   list-style: none;
@@ -22,48 +23,37 @@ header, footer {
 
 header, main, footer {
   > :first-child {
-    padding: 0 0.8rem;
+    padding: 0.2rem 0.8rem;
   }
 }
 
 a {
   color: inherit;
-}
 
-a:focus {
-  outline: 3px solid transparent;
-  text-decoration: none;
-  background-color: var(--color-highlight);
-  box-shadow:
-    0 -2px var(--color-highlight),
-    0 4px var(--color-text),
+  &:focus {
+    outline: 3px solid transparent;
+    text-decoration: none;
+    background-color: var(--color-highlight);
+    box-shadow: 0 -2px var(--color-highlight), 0 4px var(--color-text),
+  }
 }
 
 p {
   line-height: 1.75;
 }
 
-.content {
-  margin: auto;
+.skip-link:not(:focus) {
+  @include visually-hidden;
+}
 
-  &.standard {
-    max-width: var(--content-width-std);
-  }
-
-  &.expanded {
-    max-width: var(--content-width-exp);
-  }
-
-  ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    line-height: 1.9;
-  }
+.skip-link:focus {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 
+@import 'content';
 @import 'components/header';
 @import 'components/footer';

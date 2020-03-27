@@ -9,8 +9,9 @@
 <body>
   {% include "components/header.njk" %}
   <main>
-    {% block content %}
-    {% endblock %}
+    <section id="content" class="content standard">
+      {{ content | safe }}
+    </section>
   </main>
   {% include "components/footer.njk" %}
 </body>

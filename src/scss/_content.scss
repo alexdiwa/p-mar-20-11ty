@@ -1,0 +1,22 @@
+.content {
+  margin: auto;
+  max-width: var(--content-width-std);
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    line-height: 1.9;
+
+    span[role='img'] {
+      padding-right: 0.5rem;
+    }
+  }
+
+  & > * + * {
+    margin-top: 1.5em;
+    
+  }
+}
