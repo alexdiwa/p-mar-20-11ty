@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: standard
 title: CV
 ---
 

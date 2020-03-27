@@ -7,7 +7,7 @@
  * Use a better box model (opinionated).
  */
 
- html {
+html {
 	box-sizing: border-box;
 }
 
@@ -51,7 +51,7 @@ body {
  * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
  */
 
-body {
+html {
 	font-family:
 		-apple-system,
 		BlinkMacSystemFont,

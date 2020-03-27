@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: expanded
 title: Home
 ---
 

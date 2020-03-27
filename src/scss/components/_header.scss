@@ -1,0 +1,15 @@
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 300px;
+  }
+
+  li {
+    flex: 1 1 0;
+    text-align: right;
+  }
+}
