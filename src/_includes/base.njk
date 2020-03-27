@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <style>{% include "css/global.css" ignore missing %}</style>
+</head>
+<body>
+  {% include "components/header.njk" %}
+  <main>
+    <section id="content" class="content">
+      {{ content | safe }}
+    </section>
+  </main>
+  {% include "components/footer.njk" %}
+</body>
+</html>

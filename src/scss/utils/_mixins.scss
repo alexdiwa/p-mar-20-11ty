@@ -1,0 +1,17 @@
+/**
+* VISUALLY HIDDEN
+* Hides element visually and removes it from the flow,
+* but importantly, allows assitive technology to access it
+* source: Andy Bell - https://gist.github.com/hankchizljaw/fae40371ada3ea4301624091bf4379e9;
+*/
+@mixin visually-hidden {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 1px;
+  height: auto;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}

@@ -1,0 +1,23 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-feature-settings: 'cv05', 'ss01', 'zero';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 22px;
+  }
+}

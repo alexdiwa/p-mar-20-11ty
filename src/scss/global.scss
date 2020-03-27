@@ -1,0 +1,59 @@
+@import 'utils/normalize';
+@import 'utils/theme';
+@import 'utils/typography';
+@import 'utils/mixins';
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header, footer {
+  margin: auto;
+  padding: 1.5rem 0;
+  max-width: var(--content-width-std);
+}
+
+@media only screen and (min-width: 600px) {
+  header, footer {
+    padding: 3.5rem 0;
+  }
+}
+
+header, main, footer {
+  > :first-child {
+    padding: 0.2rem 0.8rem;
+  }
+}
+
+a {
+  color: inherit;
+
+  &:focus {
+    outline: 3px solid transparent;
+    text-decoration: none;
+    background-color: var(--color-highlight);
+    box-shadow: 0 -2px var(--color-highlight), 0 4px var(--color-text),
+  }
+}
+
+p {
+  line-height: 1.75;
+}
+
+.skip-link:not(:focus) {
+  @include visually-hidden;
+}
+
+.skip-link:focus {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
+@import 'content';
+@import 'components/header';
+@import 'components/footer';
