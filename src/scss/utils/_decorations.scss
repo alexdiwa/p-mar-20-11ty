@@ -8,11 +8,6 @@
     position: absolute;
     pointer-events: none;
     background-size: 100%;
-  }
-}
-
-.sprig {
-  &::after {
     top: 0;
     left: 110%;
     width: 18px;
