@@ -5,7 +5,7 @@ work:
   - title: HealthBank.io
     description: HealthBank is a platform that connects allied health professionals with clients. I revamped their UI and built a custom, dynamic search and filter system so that people can easily find and schedule appointments with health practitioners. Built using JavaScript, HTML and CSS + Sass.
     images:
-    - url: assets/healthbank-composite_clear.png
+    - url: healthbank-composite_clear
       alt: screenshots of search and filter system for HealthBank.io
   - title: HealthFeed
     description: HealthFeed is an RSS aggregator that sources and curates content relevant to the health industry. Built with React + Redux, Node, Express, MongoDB, CSS + Styled Components, AWS and Heroku.
@@ -15,7 +15,7 @@ work:
     - label: github repo - backend
       url: https://github.com/alxdwa/sailor_mern_backend
     images:
-    - url: assets/healthfeed-composite_clear.png
+    - url: healthfeed-composite_clear
       alt: screenshots of HealthFeed RSS aggregator app
   - title: Cocobuds
     description: Cocobuds is a two-sided marketplace that helps designers and developers find each other, connect and share skills. Built with Ruby on Rails, HTML, CSS + Sass, PostgreSQL and Heroku.
@@ -23,7 +23,7 @@ work:
     - label: github repo
       url: https://github.com/alxdwa/cocobuds
     images:
-    - url: assets/cocobuds-composite_clear.png
+    - url: cocobuds-composite_clear
       alt: screenshots of Cocobuds two-sided marketplace app
   - title: Archive
     description: Portfolios allow me to showcase my talents and my passion for software development and design. Here's an older version of my portfolio from March 2019, when I was just beginning my career in tech. Built using HTML, CSS and JavaScript.
@@ -31,9 +31,9 @@ work:
     - label: github repo
       url: https://github.com/alxdwa/portfolio-mar-19
     images:
-    - url: assets/portfolio_composite_clear.png
+    - url: portfolio_composite_clear
       alt: screenshots of my personal portfolio from March 2019
-    - url: assets/portfolio_composite2_clear.png
+    - url: portfolio_composite2_clear
       alt: more screenshots of my personal portfolio from March 2019
 ---
 
@@ -58,7 +58,10 @@ work:
       <ul class="work-images">
         {% for image in project.images %}
           <li>
-            <img width="850" src="{{ image.url }}" alt="{{ image.alt }}" />
+            <picture>
+              <source srcset="assets/webp/{{ image.url }}.webp" type="image/webp" aria-label="{{ image.alt }}">
+              <img width="850" src="assets/{{ image.url }}.png" alt="{{ image.alt }}" />
+            </picture>
           </li>
         {% endfor %}
       </ul>
