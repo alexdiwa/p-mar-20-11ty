@@ -3,7 +3,9 @@ const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 const fs = require("fs");
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPlugin(lazyImagesPlugin);
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    preferNativeLazyLoad: false
+  });
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
       let minified = htmlmin.minify(content, {
