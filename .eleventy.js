@@ -37,8 +37,11 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.setTemplateFormats([
-    "njk", "css", "png", "svg", "webmanifest", "xml", "html"
+    "njk", "css", "webmanifest", "xml", "html"
   ]);
+
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/work/assets");
 
   return {
     dir: {
