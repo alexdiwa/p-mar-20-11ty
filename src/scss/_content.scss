@@ -48,14 +48,10 @@ ul.cv {
 }
 
 .cv-info {
-  list-style: none;
-  padding: 0;
+  padding: 0 1em;
   margin-top: 1.5rem;
-
+  font-size: 0.7rem;
   li {
     margin-top: 0.3rem;
-    &::before {
-      content: '-'
-    }
   }
 }

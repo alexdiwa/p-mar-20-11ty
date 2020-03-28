@@ -28,14 +28,15 @@ header, footer {
   }
 }
 
-a {
+a, summary {
   color: var(--color-link);
   text-decoration: none;
   font-weight: 500;
-  padding: 1px;
+  padding: 2px;
 
   &:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   &:focus {
@@ -77,6 +78,6 @@ h2 {
 
 
 @import 'content';
-@import 'projects';
+@import 'work';
 @import 'components/header';
 @import 'components/footer';
