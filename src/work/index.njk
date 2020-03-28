@@ -1,14 +1,34 @@
 ---
 layout: base
 title: work
+work:
+  - title: HealthBank
+    description: I built a custom search and filter system so that people can easily find and schedule appointments with health practitioners.
+    images:
+    - url: assets/healthbank-1-screen.png
+      alt: screenshot of healthbank search bar
+  - title: HealthFeed
+    description: Eleventy Layouts are special templates that can be used to wrap other content. To denote that a piece of content should be wrapped in a template, simply use the layout key in your front matter, like so
 ---
 
-<details>
-  <summary>HealthBank</summary>
-  <p>HealthBank is a </p>
-</details>
-
-<details>
-  <summary>HealthBank</summary>
-  <p>Eleventy Layouts are special templates that can be used to wrap other content. To denote that a piece of content should be wrapped in a template, simply use the layout key in your front matter, like so:</p>
-</details>
+<ul class="work">
+{% for project in work %}
+  <li>
+    <details>
+      <summary>
+        {{ project.title }}
+      </summary>
+      <p>{{ project.description }}</p>
+      {% if project.images.length %}
+      <ul>
+        {% for image in project.images %}
+          <li>
+            <img src="{{ image.url }}" alt="{{ image.alt }}" />
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </details>
+  </li>
+{% endfor %}
+</ul>

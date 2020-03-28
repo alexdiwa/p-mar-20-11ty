@@ -2,3 +2,27 @@ summary {
   padding: 0.3rem;
   line-height: 1;
 }
+
+ul.work, ul.work ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul.work {
+  li + li {
+    margin-top: 3rem;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+ul.work ul {
+  li {
+    margin-top: 2rem;
+  }
+}
