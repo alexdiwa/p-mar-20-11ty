@@ -2,8 +2,8 @@
 layout: base
 title: work
 work:
-  - title: HealthBank
-    description: I built a custom search and filter system so that people can easily find and schedule appointments with health practitioners.
+  - title: HealthBank.io
+    description: I revamped their UI and built a custom, dynamic search and filter system so that people can easily find and schedule appointments with health practitioners.
     images:
     - url: assets/healthbank-1-screen.png
       alt: screenshot of healthbank search bar
@@ -14,7 +14,7 @@ work:
 <ul class="work">
 {% for project in work %}
   <li>
-    <details>
+    <details {% if loop.index == 1 %}open{% endif %}>
       <summary>
         {{ project.title }}
       </summary>

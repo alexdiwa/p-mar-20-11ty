@@ -18,11 +18,24 @@ ul.work {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: auto;
+    border-radius: 3px;
+    border: 2px solid var(--color-highlight);
+    box-shadow: 3px 3px var(--color-highlight);
   }
 }
 
 ul.work ul {
   li {
     margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  ul.work {
+    img {
+      width: 90%;
+      max-width: 90%;
+    }
   }
 }
