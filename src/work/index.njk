@@ -5,7 +5,7 @@ work:
   - title: HealthBank.io
     description: HealthBank is a platform that connects allied health professionals with clients. I revamped their UI and built a custom, dynamic search and filter system so that people can easily find and schedule appointments with health practitioners. Built using JavaScript, HTML and CSS + Sass.
     images:
-    - url: assets/healthbank-composite_clear.png
+    - url: v1585401926/healthbank-composite_clear_yw3xkr.png
       alt: screenshots of search and filter system for HealthBank.io
   - title: HealthFeed
     description: HealthFeed is an RSS aggregator that sources and curates content relevant to the health industry. Built with React + Redux, Node, Express, MongoDB, CSS + Styled Components, AWS and Heroku.
@@ -15,7 +15,7 @@ work:
     - label: github repo - backend
       url: https://github.com/alxdwa/sailor_mern_backend
     images:
-    - url: assets/healthfeed-composite_clear.png
+    - url: v1585401964/healthfeed-composite_clear_worgpp.png
       alt: screenshots of HealthFeed RSS aggregator app
   - title: Cocobuds
     description: Cocobuds is a two-sided marketplace that helps designers and developers find each other, connect and share skills. Built with Ruby on Rails, HTML, CSS + Sass, PostgreSQL and Heroku.
@@ -23,7 +23,7 @@ work:
     - label: github repo
       url: https://github.com/alxdwa/cocobuds
     images:
-    - url: assets/cocobuds-composite_clear.png
+    - url: v1585400985/cocobuds-composite_clear.png
       alt: screenshots of Cocobuds two-sided marketplace app
   - title: Archive
     description: Portfolios allow me to showcase my talents and my passion for software development and design. Here's an older version of my portfolio from March 2019, when I was just beginning my career in tech. Built using HTML, CSS and JavaScript.
@@ -31,9 +31,9 @@ work:
     - label: github repo
       url: https://github.com/alxdwa/portfolio-mar-19
     images:
-    - url: assets/portfolio_composite_clear.png
+    - url: v1585401977/portfolio_composite_clear_lniqy0.png
       alt: screenshots of my personal portfolio from March 2019
-    - url: assets/portfolio_composite2_clear.png
+    - url: v1585401990/portfolio_composite2_clear_ev4dod.png
       alt: more screenshots of my personal portfolio from March 2019
 ---
 
@@ -58,7 +58,20 @@ work:
       <ul class="work-images">
         {% for image in project.images %}
           <li>
-            <img width="850" src="{{ image.url }}" alt="{{ image.alt }}" />
+            <img
+              srcset="
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_320/{{ image.url }} 320w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_640/{{ image.url }} 640w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_960/{{ image.url }} 960w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_1280/{{ image.url }} 1280w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_1600/{{ image.url }} 1600w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_1920/{{ image.url }} 1920w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_2240/{{ image.url }} 2240w,
+                https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_2560/{{ image.url }} 2560w"
+              sizes="(min-width: 48em) 48em, 100vw"
+              src="https://res.cloudinary.com/alex-diwa/image/upload/q_auto,f_auto,w_640/{{ image.url }}"
+              alt="{{ image.alt }}"
+            />
           </li>
         {% endfor %}
       </ul>
