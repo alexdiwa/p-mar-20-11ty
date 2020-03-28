@@ -1,0 +1,60 @@
+---
+title: 404
+permalink: 404.html
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alex diwa - oops</title>
+    <style>
+    @import url('https://rsms.me/inter/inter.css');
+      html {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-feature-settings: 'cv05', 'ss01', 'zero';
+      }
+      @supports (font-variation-settings: normal) {
+        html { font-family: 'Inter var', sans-serif; }
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+      }
+      main {
+        margin: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 500;
+      }
+      a {
+        color: #008000;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 2px;
+      }
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      a:focus {
+        text-decoration: none;
+        outline: 3px solid transparent;
+        border-radius: 3px;
+        box-shadow: 0 0 0 3px #008000;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+    <h1>{{ title }}</h1>
+    <p>Sorry, couldn't find the page you were looking for!</p>
+    <p><a href="{{ "/" | url }}">home page</a></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.sprig {
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: '';
+    height: 100%;
+    z-index: 20;
+    position: absolute;
+    pointer-events: none;
+    background-size: 100%;
+    top: 0;
+    left: 110%;
+    width: 18px;
+    background: url('/assets/sprig.svg') no-repeat center right;
+  }
+}

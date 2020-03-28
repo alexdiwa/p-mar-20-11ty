@@ -5,6 +5,9 @@ ul.cv {
   & > * + * {
     margin-top: 3.5rem;
   }
+  .reduced-margin {
+    margin-top: 1.5rem;
+  }
 }
 
 .cv-header {
@@ -21,8 +24,19 @@ ul.cv {
 .cv-info {
   padding: 0 1em;
   margin-top: 1.5rem;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
+  padding-left: 0rem;
+  list-style-type: none;
+
   li {
-    margin-top: 0.3rem;
+    padding-left: 2rem;
+    background-image: url(/assets/dash.svg);
+    background-position: 0.5rem 0.4rem;
+    background-size: 0.7rem 0.7rem;
+    background-repeat: no-repeat;
+  }
+
+  li + li {
+    margin-top: 0.5rem;
   }
 }

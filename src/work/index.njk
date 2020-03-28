@@ -1,14 +1,69 @@
 ---
 layout: base
 title: work
+work:
+  - title: HealthBank.io
+    description: HealthBank is a platform that connects allied health professionals with clients. I revamped their UI and built a custom, dynamic search and filter system so that people can easily find and schedule appointments with health practitioners. Built using JavaScript, HTML and CSS + Sass.
+    images:
+    - url: assets/healthbank-composite_clear.png
+      alt: screenshots of search and filter system for HealthBank.io
+  - title: HealthFeed
+    description: HealthFeed is an RSS aggregator that sources and curates content relevant to the health industry. Built with React + Redux, Node, Express, MongoDB, CSS + Styled Components, AWS and Heroku.
+    links:
+    - label: github repo - frontend
+      url: https://github.com/alxdwa/sailor_mern_frontend
+    - label: github repo - backend
+      url: https://github.com/alxdwa/sailor_mern_backend
+    images:
+    - url: assets/healthfeed-composite_clear.png
+      alt: screenshots of HealthFeed RSS aggregator app
+  - title: Cocobuds
+    description: Cocobuds is a two-sided marketplace that helps designers and developers find each other, connect and share skills. Built with Ruby on Rails, HTML, CSS + Sass, PostgreSQL and Heroku.
+    links:
+    - label: github repo
+      url: https://github.com/alxdwa/cocobuds
+    images:
+    - url: assets/cocobuds-composite_clear.png
+      alt: screenshots of Cocobuds two-sided marketplace app
+  - title: Archive
+    description: Portfolios allow me to showcase my talents and my passion for software development and design. Here's an older version of my portfolio from March 2019, when I was just beginning my career in tech. Built using HTML, CSS and JavaScript.
+    links:
+    - label: github repo
+      url: https://github.com/alxdwa/portfolio-mar-19
+    images:
+    - url: assets/portfolio_composite_clear.png
+      alt: screenshots of my personal portfolio from March 2019
+    - url: assets/portfolio_composite2_clear.png
+      alt: more screenshots of my personal portfolio from March 2019
 ---
 
-<details>
-  <summary>HealthBank</summary>
-  <p>HealthBank is a </p>
-</details>
-
-<details>
-  <summary>HealthBank</summary>
-  <p>Eleventy Layouts are special templates that can be used to wrap other content. To denote that a piece of content should be wrapped in a template, simply use the layout key in your front matter, like so:</p>
-</details>
+<ul class="work">
+{% for project in work %}
+  <li>
+    <details {% if loop.index == 1 %}open{% endif %}>
+      <summary>
+        {{ project.title }}
+      </summary>
+      <p class="work-description">{{ project.description }}</p>
+      {% if project.links.length %}
+      <ul>
+        {% for link in project.links %}
+          <li>
+            <a href="{{ link.url }}" target="_blank">{{ link.label }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if project.images.length %}
+      <ul class="work-images">
+        {% for image in project.images %}
+          <li>
+            <img src="{{ image.url }}" alt="{{ image.alt }}" />
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </details>
+  </li>
+{% endfor %}
+</ul>
