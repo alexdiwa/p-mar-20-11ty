@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --style=compressed src/scss/global.scss src/_includes/css/global.css",
+    "sass": "sass --style=compressed --no-source-map src/scss/global.scss src/_includes/css/global.css",
     "watch:eleventy": "eleventy --serve",
     "watch:sass": "npm run sass -- --watch",
     "start": "npm-run-all sass --parallel watch:*",
