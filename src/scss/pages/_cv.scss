@@ -5,6 +5,9 @@ ul.cv {
   & > * + * {
     margin-top: 3.5rem;
   }
+  .reduced-margin {
+    margin-top: 1.5rem;
+  }
 }
 
 .cv-header {
