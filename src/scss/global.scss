@@ -9,10 +9,17 @@ nav ul {
   margin: 0;
 }
 
-header, footer {
+header, main, footer {
   margin: auto;
-  padding: 1.5rem 0;
   max-width: var(--content-width-std);
+
+  > :first-child {
+    padding: 0.2rem 0.8rem;
+  }
+}
+
+header, footer {
+  padding: 1.5rem 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -21,25 +28,41 @@ header, footer {
   }
 }
 
-header, main, footer {
-  > :first-child {
-    padding: 0.2rem 0.8rem;
-  }
-}
+a, summary {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2px;
 
-a {
-  color: inherit;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
   &:focus {
-    outline: 3px solid transparent;
     text-decoration: none;
-    background-color: var(--color-highlight);
-    box-shadow: 0 -2px var(--color-highlight), 0 4px var(--color-text),
+    outline: 3px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0 0 0 3px var(--color-link)
   }
 }
 
-p {
-  line-height: 1.75;
+h1, h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+::selection {
+  background: var(--color-highlight);
+}
+::-moz-selection {
+  background: var(--color-highlight);
 }
 
 .skip-link:not(:focus) {
@@ -49,11 +72,13 @@ p {
 .skip-link:focus {
   display: inline-block;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 5px;
+  left: 5px;
 }
 
-
-@import 'content';
 @import 'components/header';
 @import 'components/footer';
+@import 'content';
+@import 'pages/home';
+@import 'pages/cv';
+@import 'pages/work';

@@ -1,0 +1,51 @@
+---
+layout: base
+title: home
+traits:
+  - emoji: 🐛
+    label: caterpillar emoji.
+    description: I’m good at finding and fixing bugs.
+  - emoji: 🎨
+    label: art palette emoji.
+    description: I love building beautiful UIs and have a great eye for design.
+  - emoji: ✏️
+    label: pencil emoji.
+    description: I write docs that are clear and easy to understand.
+  - emoji: 🤝
+    label: handshake emoji.
+    description: I communicate well with my teammates.
+  - emoji: 📚
+    label: books emoji.
+    description: I love learning new things. Right now I’m big on testing and a11y!
+  - emoji: 🧠
+    label: brain emoji.
+    description: I’m passionate about knowledge-sharing.
+  - emoji: 💞
+    label: heart emoji.
+    description: I approach everything I do with kindness, empathy and compassion.
+  - emoji: ☕️
+    label: coffee emoji.
+    description: I’m the supportive coffee buddy you’ve always needed.
+---
+
+<h1>Hi, I’m Alex! <span role="img" aria-label="hand wave emoji.">👋🏽</span> I’m a scientist-turned-software developer based in Sydney, Australia.</h1>
+
+<p>
+  I’m passionate about frontend development, but love solving problems across the stack. In my most recent role I worked with Vue.js, HTML, CSS and Node.js, but have experience writing vanilla JavaScript, React.js and Ruby on Rails. I have the drive and eagerness to learn new tools, and love sharing what I've learnt with other people. Looking for my next role in Sydney or in the UK, remote roles welcome.
+</p>
+
+<p>
+  Hire me because:
+</p>
+
+<ul class="hire-me">
+{% for item in traits %}
+  <li>
+    <span role="img" aria-label="{{ item.label }}">{{ item.emoji }}</span> {{ item.description }}
+  </li>
+{% endfor %}
+</ul>
+
+<p>
+  Get in touch! <span role="img" aria-label="hand pointing down emoji">👇🏽</span>
+</p>

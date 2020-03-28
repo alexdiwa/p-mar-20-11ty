@@ -1,0 +1,11 @@
+ul.hire-me {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    span[role='img'] {
+      padding-right: 0.8rem;
+    }
+  }
+}

@@ -5,7 +5,7 @@ html {
   font-feature-settings: 'cv05', 'ss01', 'zero';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+  font-size: 17px;
   color: var(--color-text);
   font-weight: 400;
 }
@@ -18,6 +18,13 @@ html {
 
 @media only screen and (min-width: 600px) {
   html {
-    font-size: 22px;
+    font-size: 23px;
   }
+}
+
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
 }

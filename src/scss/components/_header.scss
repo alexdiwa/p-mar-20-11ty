@@ -5,11 +5,15 @@
   ul {
     display: flex;
     justify-content: flex-end;
-    min-width: 300px;
+    min-width: 60%;
   }
 
   li {
     flex: 1 1 0;
     text-align: right;
   }
+}
+
+.nav-item-active {
+  font-weight: 600;
 }

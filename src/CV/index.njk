@@ -1,0 +1,58 @@
+---
+title: CV
+layout: base
+history:
+  - company: GROW
+    title: Associate Frontend Developer
+    period: Oct '19 - Mar '20
+    info:
+    - Strong UI focus aligning components with design system and product requirements, and addressing technical debt
+    - Implemented a system for error tracking across the frontend codebase
+    - Authored several key features and actively participated in code reviews across three codebases
+    - Researched, documented and submitted proposals for new third-party integrations
+    - Strong collaboration across teams spanning design, product, backend and testing
+    - Proactive about unit and end-to-end testing
+    - Helped new developers find their feet
+    - "Tech stack: Vue.js, HTML, CSS, Sass, Tailwind, Koa, Node.js, Jest, Cypress"
+  - company: HealthBank
+    title: Intern Frontend Developer
+    period: Aug '19
+    info:
+    - Wrote a custom, dynamic search bar for locating health practitioners
+    - Implemented a system for filtering by certain criteria
+    - Strong collaboration with backend and product/design to flesh out requirements and deliver frontend solutions
+    - Collaborated with designers and revamped UI for practitioner profiles
+    - "Tech stack: JavaScript, Stimulus.js, HTML, CSS, Sass"
+  - company: Coder Academy
+    title: Diploma of IT
+    period: Feb '19 - Jul '19
+    info:
+    - Texdfsdsdf
+    - sdfsdfsdfs
+    - g lawefmwewegegn
+---
+
+<ul class="cv">
+{% for experience in history %}
+  <li>
+    <div class="cv-header">
+      <h2>
+        {{ experience.company }}
+      </h2>
+      <span class="cv-period">
+        {{ experience.period }}
+      </span>
+    </div>
+    
+    {{ experience.title }}
+
+    <ul class="cv-info">
+    {% for item in experience.info %}
+      <li>
+        <span>{{ item }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>

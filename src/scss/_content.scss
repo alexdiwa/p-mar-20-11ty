@@ -1,22 +1,16 @@
 .content {
+  line-height: 1.8;
   margin: auto;
   max-width: var(--content-width-std);
+  outline: 3px solid transparent;
 
   ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    line-height: 1.9;
-
-    span[role='img'] {
-      padding-right: 0.5rem;
+    & > * + * {
+      margin-top: 0.1em;
     }
   }
 
   & > * + * {
     margin-top: 1.5em;
-    
   }
 }
