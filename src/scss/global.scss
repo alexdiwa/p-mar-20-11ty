@@ -76,8 +76,9 @@ h2 {
   left: 5px;
 }
 
-
-@import 'content';
-@import 'work';
 @import 'components/header';
 @import 'components/footer';
+@import 'content';
+@import 'pages/home';
+@import 'pages/cv';
+@import 'pages/work';
