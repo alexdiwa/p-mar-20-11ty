@@ -5,6 +5,9 @@
   &.reduced-margin {
     margin-top: 1.5rem;
   }
+  > * + * {
+    margin-top: 1.5rem;
+  }
 }
 
 .cv-header {
@@ -18,11 +21,14 @@
   }
 }
 
+.cv-description {
+  font-size: 0.9rem;
+}
+
 .cv-info {
   padding: 0 1em;
-  margin-top: 1.5rem;
-  font-size: 0.80rem;
-  padding-left: 0rem;
+  font-size: 0.8rem;
+  padding-left: 0;
   list-style-type: none;
 
   li {
