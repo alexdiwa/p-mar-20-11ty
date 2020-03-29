@@ -8,9 +8,15 @@
     position: absolute;
     pointer-events: none;
     background-size: 100%;
-    top: 0;
-    left: 110%;
-    width: 18px;
+    top: 2px;
+    left: 107%;
+    width: 10px;
     background: url('/assets/sprig.svg') no-repeat center right;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sprig::after {
+    width: 18px;
   }
 }
