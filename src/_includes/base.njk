@@ -29,6 +29,9 @@
     </section>
   </main>
   {% include "components/footer.njk" %}
-  <script>/* Emoji set credit: https://github.com/twitter/twemoji */twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });</script>
+  {% set js %}
+    {% include "js/main.js" %}
+  {% endset %}
+  <script>/* Emoji set credit: https://github.com/twitter/twemoji */twemoji.parse(document.body, { folder: 'svg', ext: '.svg' }); {{ js | jsmin | safe }} </script>
 </body>
 </html>

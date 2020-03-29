@@ -40,8 +40,14 @@ work:
 
 {% for project in work %}
   <article class="work">
-    <details {% if loop.index == 1 %}open{% endif %}>
-      <summary>
+    <details id="details-{{ loop.index }}" {% if loop.index == 1 %}open{% endif %}>
+      <summary
+        id="summary-{{ loop.index }}"
+        role="button"
+        onclick="toggleDetailsAriaExpanded('details-{{ loop.index }}', 'summary-{{ loop.index }}')"
+        aria-expanded="{% if loop.index == 1 %}true{% else %}false{% endif %}"
+        tabindex="0"
+      >
         <h2>{{ project.title }}</h2>
       </summary>
       <p class="work-description">{{ project.description }}</p>

@@ -1,6 +1,7 @@
 const htmlmin = require("html-minifier");
 const lazyImagesPlugin = require("eleventy-plugin-lazyimages");
 const fs = require("fs");
+const Terser = require("terser");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(lazyImagesPlugin);
@@ -15,6 +16,16 @@ module.exports = function(eleventyConfig) {
     }
 
     return content;
+  });
+
+  eleventyConfig.addFilter("jsmin", function(code) {
+    let minified = Terser.minify(code);
+    if( minified.error ) {
+      console.log("Terser error: ", minified.error);
+      return code;
+    }
+
+    return minified.code;
   });
 
   eleventyConfig.setBrowserSyncConfig({
