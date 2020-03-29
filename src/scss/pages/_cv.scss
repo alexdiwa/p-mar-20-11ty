@@ -39,3 +39,24 @@
     background-repeat: no-repeat;
   }
 }
+
+.cv-link-container {
+  text-align: center;
+}
+
+.cv-link {
+  display: inline-flex;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+svg.paper {
+  width: 15px;
+  padding-right: 0.7rem;
+}
+
+@media only screen and (min-width: 600px) {
+  svg.paper {
+    width: 25px;
+  }
+}
