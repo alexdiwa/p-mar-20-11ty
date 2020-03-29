@@ -1,11 +1,8 @@
-ul.cv {
-  list-style: none;
-  padding: 0;
-
-  & > * + * {
+.cv {
+  & + .cv {
     margin-top: 3.5rem;
   }
-  .reduced-margin {
+  &.reduced-margin {
     margin-top: 1.5rem;
   }
 }
@@ -24,7 +21,7 @@ ul.cv {
 .cv-info {
   padding: 0 1em;
   margin-top: 1.5rem;
-  font-size: 0.85rem;
+  font-size: 0.80rem;
   padding-left: 0rem;
   list-style-type: none;
 

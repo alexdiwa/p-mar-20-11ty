@@ -37,12 +37,12 @@ work:
       alt: more screenshots of my personal portfolio from March 2019
 ---
 
-<ul class="work">
+
 {% for project in work %}
-  <li>
+  <article class="work">
     <details {% if loop.index == 1 %}open{% endif %}>
       <summary>
-        {{ project.title }}
+        <h2>{{ project.title }}</h2>
       </summary>
       <p class="work-description">{{ project.description }}</p>
       {% if project.links.length %}
@@ -67,6 +67,5 @@ work:
       </ul>
       {% endif %}
     </details>
-  </li>
+  </article>
 {% endfor %}
-</ul>

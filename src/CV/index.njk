@@ -7,9 +7,9 @@ history:
     period: Oct 2019 - Mar 2020
     info:
     - Strong UI focus aligning components with design system and product requirements, and addressing technical debt
-    - Implemented a system for error tracking across the frontend codebase
-    - Authored several key features and actively participated in code reviews across three repositories
     - Researched, documented and submitted proposals for new third-party integrations
+    - Authored several key features and actively participated in code reviews across three repositories
+    - Implemented a system for error tracking across the frontend codebase
     - Demonstrated strong verbal communication skills, collaborating across teams spanning design, product, backend and testing
     - Proactive about writing unit and end-to-end tests
     - Helped new developers find their feet
@@ -20,8 +20,8 @@ history:
     info:
     - Wrote a custom, dynamic search bar for locating health practitioners based on profession and specialty
     - Implemented a system for filtering practitioners by date, availability and appointment type
-    - Strong collaboration with backend and product/design to flesh out requirements and deliver frontend solutions
-    - Revamped UI for practitioner profile cards
+    - Collaborated with backend and product/design to flesh out requirements and deliver frontend solutions
+    - Revamped UI for practitioner listings and profile cards
     - "Tech stack: JavaScript, Stimulus.js, HTML, CSS, Sass"
   - company: Coder Academy
     title: Diploma of IT
@@ -30,21 +30,22 @@ history:
     - Changed careers and upskilled as a full-stack software developer ✨
     - Learnt a lot about building software from ideation to deployment, and discovered a passion and talent for frontend development
     - Completed two full-stack apps, a portfolio site and a terminal app, acting as tech/team lead for all of my group projects
-    - Wrote a lot of code, broke a lot of things, fixed a lot of bugs, and graduated with a High Distinction average
-    - "Tech stack: JavaScript MERN stack (React.js, Express.js, Node.js, MongoDB), HTML, CSS + Sass, Ruby on Rails, PostgreSQL, AWS, Heroku"
+    - Wrote a lot of code, broke a lot of things, fixed a lot of bugs
+    - Graduated with a High Distinction average
+    - "Tech stack: JavaScript MERN stack (React.js, Express.js, Node.js, MongoDB), HTML, CSS + Sass, Ruby on Rails, PostgreSQL, Jest, Cypress, AWS, Heroku"
   - company: Mostro Coffee
     title: Barista
     period: 2018
     info:
-    - Worked as a barista at a small speciality coffee joint inside  Oxford's first and only independent record store
+    - Grinding beans and pouring lattes at a small speciality coffee joint inside Oxford's first and only independent record store
   - company: University of Oxford
     title: Doctor of Philosophy, deferred completion
     period: 2013 - 2017
     info:
     - Researched the structure and function of cell-surface proteins implicated in cancer metastasis
     - One of 6 recipients awarded a Cancer Research UK-Nuffield Department of Medicine Prize Studentship, a fully-funded 4-year scholarship
-    - Call-Taker & Trainer, Oxford Nightline (2015 - 2017) for a student-led supportive listening service
-    - As President, Middle Common Room, Magdalen College (Jan - Dec 2015) managed a committee of 25 to serve and represent over 150 graduate students in all aspects of college life (social, welfare, academic)
+    - Volunteered as a Call-Taker & Trainer at Oxford Nightline (2015 - 2017), a student-led supportive listening service
+    - As President, Middle Common Room, Magdalen College (2015) I managed a committee of 25 to serve and represent the graduate student body in all aspects of college life (social, welfare, academic)
   - company: University of Sydney
     title: Master of Science (Chemistry)
     period: 2012 - 2013
@@ -54,24 +55,22 @@ history:
     period: 2012
     info:
     - Part-time academic appointment within the School of Chemistry
-    - Taught Fundamentals of Chemistry 1A & 1B (CHEM1001/2) courses, a stream designed for first-year university students with no prior chemistry knowledge
-    - Held 4 interactive problem-based classes a week, each with 20 - 30 students
-    - Marked examinations at semester end
+    - Taught the Fundamentals of Chemistry 1A & 1B (CHEM1001/2) courses, a stream designed for first-year university students with no prior chemistry knowledge
+    - Held 4 interactive problem-based classes a week, each with 20 - 30 students, and marked examinations at semester end
   - title: Bachelor of Science (Advanced) (Honours)
     period: 2008 - 2011
     info:
     - Graduated with First Class Honours and the University Medal
     - Ranked 1st in Chemistry cohort, awarded final mark of 95
     - Majored in Biochemistry and Chemistry, minored in Mathematics, Physics and Plant Science
-    - Admitted to the Talented Student Program by the Dean of Faculty of Science for years 1-3
+    - Admitted to the Talented Student Program by the Dean of Faculty of Science for duration of degree
 
 
 
 ---
 
-<ul class="cv">
 {% for experience in history %}
-  <li class="{% if not experience.company %}reduced-margin{% endif %}">
+  <article class="cv {% if not experience.company %}reduced-margin{% endif %}">
     <div class="cv-header">
       {% if experience.company %}
       <h2>
@@ -90,6 +89,5 @@ history:
       </li>
     {% endfor %}
     </ul>
-  </li>
+  </article>
 {% endfor %}
-</ul>
