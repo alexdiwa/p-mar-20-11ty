@@ -49,6 +49,26 @@
   padding: 0.5rem;
   font-weight: 600;
   align-items: center;
+  border: 3px solid var(--color-link);
+  border-radius: 7px;
+
+  svg {
+    stroke: var(--color-link);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+    background: var(--color-link);
+    color: var(--color-bg);
+    border-radius: 7px;
+    svg {
+      stroke: var(--color-bg);
+    }
+  }
 }
 
 svg.paper {
