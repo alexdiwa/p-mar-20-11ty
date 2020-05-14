@@ -2,6 +2,9 @@
 title: cv
 layout: base
 history:
+  - company: Eucalyptus
+    title: Junior Full-Stack Engineer
+    period: Apr 2020 - Present
   - company: GROW
     title: Frontend Engineer
     period: Oct 2019 - Mar 2020
@@ -13,9 +16,7 @@ history:
     - Key features I worked on include Member Insurance, Audit Log and Case Management
     - Researched, documented and submitted proposals for new third-party integrations
     - Implemented a system for error tracking across the frontend codebase
-    - Actively participated in code reviews across three repositories
     - Demonstrated strong verbal communication skills, collaborating across teams spanning design, product, backend and testing
-    - Proactive about writing unit and end-to-end tests
     - Helped new engineers find their feet
     - Maintained their existing superannuation fund platform and its member accounts
     - "Tech stack: Vue.js, Vuex, HTML, CSS/SCSS, Tailwind CSS, Koa, Node.js, Jest, Cypress"
@@ -78,12 +79,12 @@ history:
 
 ---
 
-<div class="cv-link-container">
+{# <div class="cv-link-container">
   <a tabindex="0" role="button" class="cv-link" href="/assets/AlexDiwaCV.pdf" download>
     <svg class="paper" viewBox="0 0 26 34" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5"><g fill="none" stroke-width="3"><path d="M24.429 9.194L16.884 1.5H1.5v30.187h22.929V9.194zM23.219 9.763l-6.73.019M16.407 2.966l-.026 6.809"/></g></svg>
     download CV
   </a>
-</div>
+</div> #}
 {% for experience in history %}
   <article class="cv {% if not experience.company %}reduced-margin{% endif %}">
     <div class="cv-header">
