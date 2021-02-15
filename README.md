@@ -1,4 +1,4 @@
-### Alex Diwa's CV & Portfolio, March 2020
+### Alex Diwa's CV & Portfolio, March 2020 - Present
 
 This is an up-to-date CV and Portfolio site that I built using [Eleventy](https://www.11ty.dev/), HTML and CSS/SCSS. Emoji set provided by [Twemoji](https://github.com/twitter/twemoji). 
 
